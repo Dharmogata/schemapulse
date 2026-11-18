@@ -336,7 +336,7 @@ def to_typed_dict_code(
         if not path:
             used_names.add(root_name)
             return root_name
-        clean = path.replace("[]", "Item")
+        clean = path.replace("[]", "_item")
         candidate = _pascal_case(clean)
         if candidate in used_names:
             idx = 2
